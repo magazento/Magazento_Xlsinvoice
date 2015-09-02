@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <modules>
+        <Magazento_Xlsinvoice>
+            <version>1.1.4</version>
+        </Magazento_Xlsinvoice>
+    </modules>
+    
+    <global>
+        <rewrite>
+            <mage_adminhtml_system_variable>
+                <from><![CDATA[#^/xlsinvoice/system_variable#]]>
+                </from>
+                <to>/admin/system_variable</to>
+            </mage_adminhtml_system_variable>
+        </rewrite>
+        <models>
+            <xlsinvoice>
+                <class>Magazento_Xlsinvoice_Model</class>
+            </xlsinvoice>
+        </models>
+        <blocks>
+            <xlsinvoice>
+                <class>Magazento_Xlsinvoice_Block</class>
+            </xlsinvoice>
+            <adminhtml>  
+                <rewrite>  
+                    <sales_order_invoice_view>Magazento_Xlsinvoice_Block_Admin_Sales_Order_Invoice_View</sales_order_invoice_view>  
+                    <sales_order_creditmemo_view>Magazento_Xlsinvoice_Block_Admin_Sales_Order_Creditmemo_View</sales_order_creditmemo_view>  
+                    <sales_order_shipment_view>Magazento_Xlsinvoice_Block_Admin_Sales_Order_Shipment_View</sales_order_shipment_view>  
+                </rewrite>  
+            </adminhtml>              
+        </blocks>
+        <helpers>
+            <xlsinvoice>
+                <class>Magazento_Xlsinvoice_Helper</class>
+            </xlsinvoice>
+        </helpers>
+    </global>
+    
+    <admin>
+        <routers>
+            <magazento_xlsinvoice>
+                <use>admin</use>
+                <args>
+                    <module>Magazento_Xlsinvoice</module>
+                    <frontName>xlsinvoice</frontName>
+                </args>
+            </magazento_xlsinvoice>
+        </routers>
+    </admin>
+    
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <xlsinvoice translate="title">
+                            <title>Xlsinvoice</title>
+                            <children>
+                                <invoice translate="title">
+                                    <title>Manage invoices </title>
+                                </invoice>
+                            </children>
+                            <sort_order>65</sort_order>
+                        </xlsinvoice>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <xlsinvoice>
+                                            <title>Xlsinvoice</title>
+                                            <sort_order>101</sort_order>
+                                        </xlsinvoice>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <menu>
+            <system translate="title" module="xlsinvoice">
+                <children>
+                    <invoice translate="title" module="xlsinvoice">
+                        <title>XLS Invoice</title>
+                        <sort_order>0</sort_order>
+                        <action>xlsinvoice/admin_invoice/edit</action>
+                        <resource>xlsinvoice/admin/invoice/edit</resource>
+                    </invoice>
+                    <shipment translate="title" module="xlsinvoice">
+                        <title>XLS Shipment</title>
+                        <sort_order>0</sort_order>
+                        <action>xlsinvoice/admin_shipment/edit</action>
+                        <resource>xlsinvoice/admin/shipment/edit</resource>
+                    </shipment>
+                    <creditmemo translate="title" module="xlsinvoice">
+                        <title>XLS Credit memo</title>
+                        <sort_order>0</sort_order>
+                        <action>xlsinvoice/admin_creditmemo/edit</action>
+                        <resource>xlsinvoice/admin/creditmemo/edit</resource>
+                    </creditmemo>
+                </children>
+            </system>
+        </menu>
+    </adminhtml>
+    <default>
+        <xlsinvoice>
+            <invoice>
+                <file>invoice_1347631716.xls</file>
+                <template_type>Excel5</template_type>
+            </invoice>
+            <shipment>
+                <file>shipment_13475469282.xls</file>
+                <template_type>Excel5</template_type>
+            </shipment>
+            <creditmemo>
+                <file>creditmemo_1347546928.xls</file>
+                <template_type>Excel5</template_type>
+            </creditmemo>
+        </xlsinvoice>
+    </default>
+</config>
