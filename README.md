@@ -2,7 +2,7 @@
 <p>Templates can be easily customized in Microsoft Excel 2003+ or OpenOffice. You can start with commented templates supplied with the module. For ease of work, a tuning template is available, which displays the source data. You can get an overview of usable data, even if you want to use your own added data.&nbsp;</p>
 <p><strong>Demo:</strong></p>
 <p>EXCEL creditmemo sample:&nbsp;<br /><a href="http://www.magazento.com/promo/xlsinvoice/creditmemo_2_1347625448.xls" target="_blank">creditmemo_2_1347625448.xls</a><br /> EXCEL&nbsp;invoice sample:&nbsp;<br /> <a href="http://www.magazento.com/promo/xlsinvoice/invoice_2_1347716319.xls" target="_blank">invoice_2_1347716319.xls</a><br /><a href="http://www.magazento.com/promo/xlsinvoice/invoice_atkart.xls" target="_blank">invoice_atkart.xls</a><br /> <a href="http://www.magazento.com/promo/xlsinvoice/invoice_kidzarella.xls" target="_blank">invoice_kidzarella.xls</a><br /> EXCEL&nbsp;shipment sample:&nbsp;<br /><a href="http://www.magazento.com/promo/xlsinvoice/shipment_2_1347625437.xls" target="_blank">shipment_2_1347625437.xls</a></p>
-<p>Magento admin: <a href="http://demo2.ecommerceoffice.com/index.php/admin/" target="_blank">http://demo2.ecommerceoffice.com/admin/</a>&nbsp;[login:demo123 \ password:demo123]</p>
+
 <p><strong><strong><strong><strong><strong><strong>XLS</strong>&nbsp;Invoice 1.1.3 new features!</strong></strong></strong></strong></strong></p>
 <p>Decimal help fuction added - Format a number with grouped thousands.<span>&nbsp;<strong>{{xls.invoice.XXX.decimal.Y}}</strong></span></p>
 <p><strong><em>Example:</em></strong><br /><span>{{xls.invoice.shipping_tax_amount}} will display 1002.01</span></p>
